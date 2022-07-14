@@ -11,10 +11,12 @@ module.exports = {
  module: {
   rules: [
     {
-      test: /\.css$/,
+      test: /\.(s[ac]|c)ss$/i,
       use: [
         MiniCssExtractPlugin.loader,
-        'css-loader'
+        'css-loader',
+        'postcss-loader',
+        'sass-loader'
       ]
     },
     {
