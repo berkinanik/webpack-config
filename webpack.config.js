@@ -8,8 +8,17 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
  mode: mode,
+
+ output: {
+  assetModuleFilename: "images/[hash][ext][query]",
+ },
+
  module: {
   rules: [
+    {
+      test: /\.(png|jpe?g|gif|svg|ico)$/,
+      type: "asset"
+    },
     {
       test: /\.(s[ac]|c)ss$/i,
       use: [
@@ -35,7 +44,7 @@ module.exports = {
   extensions: [".js", ".jsx"],
  },
 
- devtool: 'source-map',
+//  devtool: 'source-map',
  devServer: {
   hot: true,
   static: './dist'

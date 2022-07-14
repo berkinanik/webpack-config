@@ -13,3 +13,11 @@ main {
   align-items: flex-start;
   justify-content: center;
 }
+
+.banner {
+  background: url(../images/nice-view.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  width: 100%;
+}

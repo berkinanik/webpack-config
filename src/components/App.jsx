@@ -4,7 +4,7 @@ import '../styles/index.scss';
 const App = () => {
   return (
     <>
-      <section></section>
+      <section className="banner"></section>
       <main>
         <section>
           <h1>Oh Hai, React</h1>
